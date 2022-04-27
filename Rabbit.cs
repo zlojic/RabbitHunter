@@ -38,15 +38,11 @@ public class Rabbit
 
     private void Move()
     {
-        bool forward = (random.Next(2) == 1);
-        bool backward = !forward;
-
-        if (forward)
+        if (random.Next(2) == 1)
         {
             this.position += 1;
         }
-
-        if (backward)
+        else
         {
             this.position -= 1;
         }
@@ -55,8 +51,7 @@ public class Rabbit
         {
             this.position = this.startField + 1;
         }
-
-        if (this.position > this.endField)
+        else if (this.position > this.endField)
         {
             this.position = this.endField - 1;
         }
